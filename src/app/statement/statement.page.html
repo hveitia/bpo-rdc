@@ -1,0 +1,48 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>Consulta Cheques</ion-title>
+		<ion-buttons slot="primary">
+			<ion-icon slot="end" name="filter-outline" (click)="toogleShowFilters()"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list lines="none" style="z-index: 998; margin-left: 0; width: 100%; position: fixed; background-color: white;">
+		<ion-item lines="none" *ngIf="showFilters">
+			<ion-datetime (ionChange)="filterByDate()" [(ngModel)]="fechaDesde"  displayFormat="DD/MM/YYYY" placeholder="Buscar desde el" value="" display-timezone="utc"></ion-datetime>
+		</ion-item>
+		<ion-item lines="none" *ngIf="showFilters">
+			<ion-datetime (ionChange)="filterByDate()"  [(ngModel)]="fechaHasta" displayFormat="DD/MM/YYYY" placeholder="Buscar hasta el" value="" display-timezone="utc"></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-grid>
+				<ion-row>
+					<ion-col style="text-align: center">
+						<ion-toggle [(ngModel)]="showAprobados" (ionChange)="handleShowEstados()"></ion-toggle>
+						<ion-label> Aprobados</ion-label>
+					</ion-col>
+					<ion-col style="text-align: center">
+						<ion-toggle [(ngModel)]="showRechazados" (ionChange)="handleShowEstados()"></ion-toggle>
+						<ion-label>Rechazados</ion-label>
+					</ion-col>
+					<ion-col style="text-align: center">
+						<ion-toggle [(ngModel)]="showPendientes" (ionChange)="handleShowEstados()"></ion-toggle>
+						<ion-label>Pendientes</ion-label>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+		</ion-item>
+	</ion-list>
+	<ion-list lines="none" style="z-index: 1; " [ngClass]="{ 'margin-top-30': showFilters === false,'margin-top-65': showFilters === true }">
+		<ion-item *ngFor="let cheque of listadoChequesMostrar" (click)="showDetailModal(cheque)">
+			<div class="item_inner">
+				<h3 class="d-flex">Cheque # {{cheque.numero}} <span class="end" style="font-size: 0.8rem;">{{cheque.fecha}}</span></h3>
+				<h4 class="d-flex">{{cheque.banco}}<span class="end">${{cheque.valor}}</span></h4>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>

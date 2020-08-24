@@ -1,0 +1,46 @@
+	ion-list {
+		margin: 0;
+		margin-top: 13px;
+		padding: 0;
+		background: none;
+
+		ion-item {
+			width: calc(100% - 20px);
+			margin: 0 auto;
+			border-radius: 8px;
+			margin-bottom: 13px;
+			padding: 15px;
+			box-shadow: 0 5px 4px -6px rgba(0, 0, 0, 0.4);
+			--background: var(--transparent);
+			background: var(--white);
+			--inner-padding-end: 0px;
+			--inner-min-height: unset !important;
+			--padding-start: 0;
+			--min-height: unset;
+
+			.icon_box {
+				margin: 0;
+				width: 45px;
+				margin-right: 20px;
+			}
+
+			.text_box {
+				width: 100%;
+
+				h2 {
+					margin: 0;
+					margin-bottom: 5px;
+					font-weight: 700;
+					font-size: 1rem;
+				}
+
+				h3 {
+					color: var(--text-light);
+					font-size: .9rem;
+					font-weight: 400;
+					margin: 0;
+
+				}
+			}
+		}
+	}

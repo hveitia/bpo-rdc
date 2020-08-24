@@ -1,0 +1,71 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'make_a_deposite' | translate}}</ion-title>
+		<ion-buttons slot="primary">
+			<ion-icon class="icon-information" slot="end" name="help-circle-outline" (click)="showHelpModal()"></ion-icon>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+	<div class="img_container">
+		<ion-card>
+<!--			<span class="end">{{'delete' | translate}}</span>-->
+			<p class="d-flex">{{'front_side' | translate}} </p>
+			<div class="img_box center_img">
+<!--				<img src="assets/imgs/cheque_book.jpg" class="crop_img">-->
+			</div>
+			<ion-icon class="zmdi zmdi-camera"></ion-icon>
+		</ion-card>
+
+		<ion-card>
+			<p class="d-flex">{{'back_side' | translate}} <span class="end"></span></p>
+			<div class="img_box center_img">
+<!--				<img src="assets/imgs/cheque_book.jpg" class="crop_img">-->
+			</div>
+			<ion-icon class="zmdi zmdi-camera"></ion-icon>
+		</ion-card>
+	</div>
+
+	<div class="form">
+		<ion-list lines="none">
+			<h2 class="d-flex">Cheque #</h2>
+			<ion-item lines="none">
+				<ion-input type="number" placeholder="Número de cheque"></ion-input>
+			</ion-item>
+			<h2>{{'deposite_to' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select interface="action-sheet"  placeholder="{{'select_bank' | translate}}">
+					<ion-select-option value="1">Banco Amazonas</ion-select-option>
+					<ion-select-option value="2">Banco Pichincha</ion-select-option>
+					<ion-select-option value="3">Banco Guayaquil</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<h2 class="d-flex">{{'account_tipe' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select  interface="action-sheet"  placeholder="{{'select_account_type' | translate}}">
+					<ion-select-option value="1">Ahorros</ion-select-option>
+					<ion-select-option value="2">Corriente</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<h2 class="d-flex">{{'account_number' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="number" placeholder="{{'account_number'  | translate}}"></ion-input>
+			</ion-item>
+			<h2 class="d-flex">{{'amount' | translate}}</h2>
+			<ion-item lines="none">
+				<app-input-currency [precision]="precision" [amount]="''" (amountEntered)="amountChanged($event)"
+				style="width: 100%;"></app-input-currency>
+			</ion-item>
+			<h2 class="d-flex" style="font-size: 0.8rem">Comisión: <span class="end"> $0.00</span></h2>
+		</ion-list>
+	</div>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="block" class="btn" (click)="presentAlertConfirm()">{{'transfer_now' | translate}}</ion-button>
+</ion-footer>

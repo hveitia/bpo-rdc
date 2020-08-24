@@ -1,0 +1,61 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>{{'done' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+	<ion-list lines="none">
+		<div class="list_header ion-text-center">
+			<ion-icon class="zmdi zmdi-check-all"></ion-icon>
+			<h1>{{'transfered_successfull' | translate}} !!</h1>
+		</div>
+		<ion-item>
+			<div class="item_inner">
+				<h3>{{'transfered_to' | translate}}</h3>
+				<h2>Emilli Willimoson</h2>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div class="item_inner">
+				<h3>{{'from' | translate}}</h3>
+				<h2>SB 1241 2145 2142 1145</h2>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div class="item_inner">
+				<ion-row>
+					<ion-col size="6">
+						<h3>{{'amount_transfered' | translate}}</h3>
+						<h2>$ 550<sub>.00</sub></h2>
+					</ion-col>
+					<ion-col size="6">
+						<h3>{{'payment_mode' | translate}}</h3>
+						<h2>IMPS</h2>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-item>
+		<ion-item>
+			<div class="item_inner">
+				<h3>{{'remark' | translate}}</h3>
+				<h2>Send for Home Rent.</h2>
+			</div>
+		</ion-item>
+		<p>{{'sent_on' | translate}} 15 June, 2019 11:49 am</p>
+	</ion-list>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+	<ion-row>
+		<ion-col size="6">
+			<ion-button size="large" shape="block" class="btn send_more" (click)="other()">{{'send_more' | translate}}</ion-button>
+		</ion-col>
+
+		<ion-col size="6">
+			<ion-button size="large" shape="block" class="btn" (click)="tabs()">{{'back_to_home' | translate}}</ion-button>
+		</ion-col>
+	</ion-row>
+</ion-footer>

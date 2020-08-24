@@ -1,0 +1,44 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title></ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="banner">
+		<h2 class="ion-text-center"><img src="assets/imgs/logo.png" style="max-width: 79%;" alt=""></h2>
+	</div>
+
+	<div class="form">
+		<h2 class="ion-text-center">{{'register_with_your_banking_details' | translate}}</h2>
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="Nombre y Apellidos"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="email" placeholder="Email"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-select interface="action-sheet"  placeholder="Tipo de identificación">
+					<ion-select-option value="1">Cédula</ion-select-option>
+					<ion-select-option value="2">Ruc</ion-select-option>
+					<ion-select-option value="2">Pasaporte</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="email" placeholder="Identificación"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-input type="number" placeholder="Celular"></ion-input>
+			</ion-item>
+		</ion-list>
+		<ion-button size="large" shape="block" class="btn" (click)="verification()">{{'continue' | translate}}</ion-button>
+	</div>
+
+<!--	<div class="thumb_impression ion-text-center">-->
+<!--		<h2>{{'sign_up_text' | translate}}<br>{{'phone_number' | translate}}</h2>-->
+<!--	</div>-->
+</ion-content>

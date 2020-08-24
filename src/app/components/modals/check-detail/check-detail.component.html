@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-icon class="icon-information" slot="end" name="exit-outline" (click)="dismiss()"></ion-icon>
+    </ion-buttons>
+    <ion-title>Detalle de cheque</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="bg_color">
+  <ion-list lines="none">
+    <ion-item class="panding">
+      <div class="item_inner">
+        <ion-row>
+          <ion-col size="8">
+            <h4>Estado</h4>
+            <h3>{{cheque.estado}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <h4>{{'deposite_to' | translate}}</h4>
+            <h3>{{cheque.banco}}</h3>
+          </ion-col>
+          <ion-col size="4">
+            <h4>{{'amount' | translate}}</h4>
+            <h3>${{cheque.valor}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <h4>Fecha</h4>
+            <h3>{{cheque.fecha}}</h3>
+          </ion-col>
+          <ion-col size="4">
+            <h4>Hora</h4>
+            <h3>{{cheque.hora}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <h4>Cuenta cheque</h4>
+            <h3>{{cheque.cuenta}}</h3>
+          </ion-col>
+          <ion-col size="4">
+            <h4>Cheque #</h4>
+            <h3>{{cheque.numero}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8">
+            <h4>Cuenta acreditar</h4>
+            <h3>{{cheque.cuentaAcreditar}}</h3>
+          </ion-col>
+          <ion-col size="4">
+            <h4>Comisión</h4>
+            <h3>${{cheque.comision}}</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <h4>Detalle</h4>
+            <h3>{{cheque.detalle}}</h3>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

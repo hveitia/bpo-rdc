@@ -1,0 +1,80 @@
+ion-header ion-toolbar ion-title {
+	padding: 0 15px !important;
+	position: absolute !important;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+ion-list {
+	width: calc(100% - 37px);
+	margin: 0 auto;
+	padding-top: 25px;
+	background: none;
+
+	ion-item {
+		padding: 0;
+		border-bottom: 1px solid #ccc !important;
+		padding-bottom: 8px;
+		margin-bottom: 11px;
+		transition: all .3s ease-in-out, -webkit-transform .3s ease-in-out;
+		--background: var(--transparent);
+		background: var(--transparent);
+		--inner-padding-end: 0px;
+		--inner-min-height: unset !important;
+		--padding-start: 0;
+		--min-height: unset;
+
+		.item_inner {
+			padding: 0;
+			width: 100%;
+
+			h2 {
+				font-size: 1rem;
+				margin: 0;
+				font-weight: 500;
+				margin-bottom: 4px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			p {
+				color: var(--text-light);
+				font-size: .8rem;
+				font-weight: 400;
+				display: none;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				margin: 0;
+				transition: all 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+
+				&:first-of-type {
+					display: block !important;
+				}
+			}
+		}
+
+		&.active {
+			padding-bottom: 0;
+			//transform: scale3d(1.16667, 1.16667, 1);
+			transition: all .3s ease-in-out, -webkit-transform .3s ease-in-out;
+
+			.item_inner p {
+				color: var(--text-black);
+				white-space: normal;
+				display: block !important;
+				overflow: visible;
+				font-size: .95rem;
+				font-weight: 400;
+				line-height: 20px;
+				margin-bottom: 17px;
+				transition: all 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+
+			}
+
+		}
+	}
+}

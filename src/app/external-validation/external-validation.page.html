@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="banner">
+        <h2 class="ion-text-center"><img src="assets/imgs/logo.png" style="max-width: 79%;" alt=""></h2>
+    </div>
+    <div class="form">
+        <h2 class="ion-text-center">Ingrese los datos solicitados</h2>
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <ion-input type="text" placeholder="Ocupación"></ion-input>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-select interface="action-sheet"  placeholder="Estado civil">
+                    <ion-select-option value="1">Soltero</ion-select-option>
+                    <ion-select-option value="2">Casado</ion-select-option>
+                    <ion-select-option value="2">Divorciado</ion-select-option>
+                    <ion-select-option value="2">Viudo</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <ion-button size="large" shape="block" class="btn" (click)="password_validation()">{{'continue' | translate}}</ion-button>
+    </div>
+    <!--	<div class="thumb_impression ion-text-center">-->
+    <!--		<h2>{{'verification_text' | translate}}<br>{{'verification_text_2' | translate}}</h2>-->
+    <!--	</div>-->
+</ion-content>

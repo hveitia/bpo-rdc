@@ -1,0 +1,46 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'support' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="banner">
+		<h2 class="ion-text-center">{{'app_title' | translate}} <span>{{'app_title_2' | translate}}</span></h2>
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-card>
+				<h2>{{'we_are_here' | translate}}</h2>
+				<p>Fragment Park, Near World Trade building, Melbourne, Australia.</p>
+			</ion-card>
+
+			<ion-card>
+				<h2>{{'connect_us' | translate}}</h2>
+				<h3 class="d-flex">
+					<ion-icon class="zmdi zmdi-phone ion-text-start"></ion-icon> +1 987 654 3210
+				</h3>
+				<h3 class="d-flex">
+					<ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon> help@kdemmy.com
+				</h3>
+			</ion-card>
+
+			<ion-card>
+				<h2>{{'write_us_directly' | translate}}</h2>
+				<div class="d-flex item_inner">
+					<ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+					<ion-item lines="none">
+						<ion-textarea rows="1" placeholder="{{'your_message' | translate}}"></ion-textarea>
+					</ion-item>
+				</div>
+			</ion-card>
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="full" class="btn">{{'submit' | translate}}</ion-button>
+</ion-footer>

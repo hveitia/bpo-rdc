@@ -1,0 +1,78 @@
+ion-header ion-toolbar ion-title {
+	padding: 0 15px !important;
+	position: absolute !important;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.map {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+.near_me {
+	position: absolute;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+
+	ion-icon {
+		color: var(--white);
+		font-size: .9rem;
+		margin: 0 auto;
+	}
+
+	&.atm {
+		background: var(--secondary),
+	}
+
+	&.bank {
+		background: var(--primary),
+	}
+}
+
+.my_location {
+	position: absolute;
+	z-index: 99;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	overflow: hidden;
+	text-align: center;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #ff5e39;
+		opacity: .4;
+	}
+
+	ion-icon {
+		color: #ff5e39;
+		font-size: .95rem;
+		line-height: 22px;
+		margin: 0;
+		height: 100%;
+
+	}
+}

@@ -1,0 +1,84 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'loans' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color">
+	<div class="banner">
+		<ion-card (click)="loan_statement()">
+			<ion-row>
+				<ion-col size="7">
+					<h3>Home Loan</h3>
+					<h2>1124 2541 2574</h2>
+				</ion-col>
+				<ion-col size="5">
+					<h4>{{'view_statement' | translate}}</h4>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col size="7">
+					<h3>{{'due_amount' | translate}}</h3>
+					<h2>$ 200000<sub>.00</sub></h2>
+				</ion-col>
+				<ion-col size="5">
+					<h3>{{'emi' | translate}}</h3>
+					<h2>$ 1000<sub>.00</sub></h2>
+				</ion-col>
+			</ion-row>
+		</ion-card>
+
+		<ion-card (click)="loan_statement()">
+			<ion-row>
+				<ion-col size="7">
+					<h3>Personal Loan</h3>
+					<h2>8754 1414 2541</h2>
+				</ion-col>
+				<ion-col size="5">
+					<h4>{{'view_statement' | translate}}</h4>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col size="7">
+					<h3>{{'due_amount' | translate}}</h3>
+					<h2>$ 80000<sub>.00</sub></h2>
+				</ion-col>
+				<ion-col size="5">
+					<h3>{{'emi' | translate}}</h3>
+					<h2>$ 700<sub>.00</sub></h2>
+				</ion-col>
+			</ion-row>
+		</ion-card>
+	</div>
+
+	<ion-list lines="none">
+		<h2>{{'loan_offers_available' | translate}}</h2>
+		<ion-item (click)="loan_info()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img" slot="start">
+					<img src="assets/imgs/img_travel.png" class="crop_img">
+				</div>
+				<div class="text-box">
+					<h3>Travel for</h3>
+					<h2>discover yourself !</h2>
+					<h4 class="d-flex"><span>{{'apply_now' | translate}}</span> {{'instant_loan_at' | translate}}<br>Just 8.90% interest</h4>
+				</div>
+			</div>
+		</ion-item>
+		<ion-item (click)="loan_info()">
+			<div class="item_inner d-flex">
+				<div class="img_box center_img" slot="start">
+					<img src="assets/imgs/img_study.png" class="crop_img">
+				</div>
+				<div class="text-box">
+					<h3>Get a Lowest interest rate</h3>
+					<h2>Education Loan</h2>
+					<h4 class="d-flex"><span>{{'apply_now' | translate}}</span> {{'instant_loan_at' | translate}}<br>Just 8.90% interest</h4>
+				</div>
+			</div>
+		</ion-item>
+	</ion-list>
+</ion-content>

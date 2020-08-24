@@ -1,0 +1,42 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'add_beneficiary' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="form">
+		<ion-list lines="none">
+			<h2>{{'baneficiary_bank' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select mode="md" [(ngModel)]="from_account" interface="action-sheet">
+					<ion-select-option value="1">SB 1144 2254 2478 2145</ion-select-option>
+					<ion-select-option value="2">SB 2244 1154 6778 7745</ion-select-option>
+					<ion-select-option value="3">SB 8844 5654 3278 1045</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<h2>{{'baneficiary_full_name' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="name" value="Sam Smith"></ion-input>
+			</ion-item>
+
+			<h2>{{'baneficiary_account_number' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="text" value="SB 1144 2254 2478 2145"></ion-input>
+			</ion-item>
+			
+			<h2>{{'transfer_limit' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="text" value="$ 500.00"></ion-input>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+ 
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="block" class="btn">{{'submit' | translate}}</ion-button>
+</ion-footer>

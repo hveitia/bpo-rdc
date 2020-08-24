@@ -1,0 +1,26 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title></ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="banner">
+		<h2 class="ion-text-center"><img src="assets/imgs/logo.png" style="max-width: 79%;" alt=""></h2>
+	</div>
+	<div class="form">
+		<h2 class="ion-text-center">{{'enter_otp_send_on' | translate}}</h2>
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-input type="password" placeholder="{{'enter_otp_code' | translate}}"></ion-input>
+			</ion-item>
+		</ion-list>
+		<ion-button size="large" shape="block" class="btn" (click)="tabs()">{{'continue' | translate}}</ion-button>
+	</div>
+<!--	<div class="thumb_impression ion-text-center">-->
+<!--		<h2>{{'verification_text' | translate}}<br>{{'verification_text_2' | translate}}</h2>-->
+<!--	</div>-->
+</ion-content>

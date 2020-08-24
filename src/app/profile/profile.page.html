@@ -1,0 +1,49 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>{{'profile' | translate}}</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+	<div class="profile_img_box">
+		<div class="profile_img center_img">
+			<img src="assets/imgs/profile.png" class="crop_img">
+		</div>
+		<ion-icon class="zmdi zmdi-camera"></ion-icon>
+	</div>
+	<div class="form">
+		<ion-list lines="none">
+			<ion-item lines="none">
+				<ion-label position="floating">{{'full_name' | translate}}</ion-label>
+				<ion-input type="text" value="Sam Smith"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="floating">{{'email_address' | translate}}</ion-label>
+				<ion-input type="text" value="samsmith@mail.com"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="floating">{{'account_number' | translate}}</ion-label>
+				<ion-input type="text" value="+1 987 654 3210"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="floating">{{'customer_id' | translate}}</ion-label>
+				<ion-input type="text" value="HDXC114124"></ion-input>
+			</ion-item>
+			<!--
+		<ion-item>
+			<ion-label fixed>{{'date_of_birth' | translate}}</ion-label>
+			<ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="event.month"></ion-datetime>
+			<ion-icon class="zmdi zmdi-calendar-alt" item-end text-end></ion-icon>
+		</ion-item>
+-->
+		</ion-list>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="full" class="btn">{{'update_profile' | translate}}</ion-button>
+</ion-footer>

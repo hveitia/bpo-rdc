@@ -1,0 +1,51 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+		</ion-buttons>
+		<ion-title>
+			<h2>
+				{{'fund_transfer' | translate}}
+				<small>{{'within_bank' | translate}}</small>
+			</h2>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<div class="form">
+		<ion-list lines="none">
+			<h2>{{'from_account' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-select mode="md" [(ngModel)]="from_account" interface="action-sheet">
+					<ion-select-option value="1">SB 1144 2254 2478 2145</ion-select-option>
+					<ion-select-option value="2">SB 2244 1154 6778 7745</ion-select-option>
+					<ion-select-option value="3">SB 8844 5654 3278 1045</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<h2 class="d-flex">{{'to_account' | translate}}
+				<span class="end" (click)="add_beneficiary()">{{'add_beneficiary' | translate}}</span>
+			</h2>
+			<ion-item lines="none">
+				<ion-select interface="action-sheet" mode="md" placeholder="{{'choose_beneficiary' | translate}}">
+					<ion-select-option value="1">SB 1144 2254 2478 2145</ion-select-option>
+					<ion-select-option value="2">SB 2244 1154 6778 7745</ion-select-option>
+					<ion-select-option value="3">SB 8844 5654 3278 1045</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+			<h2 class="d-flex">{{'enter_amount' | translate}} <span class="end">100 500 1000 2000</span></h2>
+			<ion-item lines="none">
+				<ion-input type="number" placeholder="0.00"></ion-input>
+			</ion-item>
+
+			<h2 class="d-flex">{{'remark' | translate}}</h2>
+			<ion-item lines="none">
+				<ion-input type="text" placeholder="{{'enter_remark' | translate}}"></ion-input>
+			</ion-item>
+		</ion-list>
+	</div>
+</ion-content>
+<ion-footer class="ion-no-border">
+	<ion-button size="large" shape="block" class="btn" (click)="transfered_successfully()">{{'transfer_now' | translate}}</ion-button>
+</ion-footer>

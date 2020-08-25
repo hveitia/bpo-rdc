@@ -14,12 +14,17 @@
     <div class="form">
         <h2 class="ion-text-center">Ingrese los datos solicitados</h2>
         <ion-list lines="none">
+            <h2 class="d-flex">Ocupación</h2>
             <ion-item lines="none">
                 <ion-input type="text" placeholder="Ocupación"></ion-input>
             </ion-item>
+            <h2 class="d-flex">Fecha de caducidad de la cédula</h2>
             <ion-item lines="none">
-                <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+                <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"
+                style="width: 100%; padding-top: 10px !important; height: 40px;"
+                ></ion-datetime>
             </ion-item>
+            <h2 class="d-flex">Estado civil</h2>
             <ion-item lines="none">
                 <ion-select interface="action-sheet"  placeholder="Estado civil">
                     <ion-select-option value="1">Soltero</ion-select-option>

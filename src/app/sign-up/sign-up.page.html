@@ -13,14 +13,17 @@
 	</div>
 
 	<div class="form">
-		<h2 class="ion-text-center">{{'register_with_your_banking_details' | translate}}</h2>
+		<h2 class="ion-text-center">Ingrese los datos solicitados</h2>
 		<ion-list lines="none">
+			<h2 class="d-flex">Nombre y Apellidos</h2>
 			<ion-item lines="none">
 				<ion-input type="text" placeholder="Nombre y Apellidos"></ion-input>
 			</ion-item>
+			<h2 class="d-flex">Email</h2>
 			<ion-item lines="none">
 				<ion-input type="email" placeholder="Email"></ion-input>
 			</ion-item>
+			<h2 class="d-flex">Tipo de identificación</h2>
 			<ion-item lines="none">
 				<ion-select interface="action-sheet"  placeholder="Tipo de identificación">
 					<ion-select-option value="1">Cédula</ion-select-option>
@@ -28,9 +31,11 @@
 					<ion-select-option value="2">Pasaporte</ion-select-option>
 				</ion-select>
 			</ion-item>
+			<h2 class="d-flex">Identificación</h2>
 			<ion-item lines="none">
-				<ion-input type="email" placeholder="Identificación"></ion-input>
+				<ion-input type="text" placeholder="Identificación"></ion-input>
 			</ion-item>
+			<h2 class="d-flex">Celular</h2>
 			<ion-item lines="none">
 				<ion-input type="number" placeholder="Celular"></ion-input>
 			</ion-item>

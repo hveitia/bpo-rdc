@@ -16,11 +16,13 @@
 	<div class="form">
 		<h2 class="ion-text-center">{{'or_sign_in_with_customer_id' | translate}}</h2>
 		<ion-list lines="none">
+			<h2 class="d-flex">{{'email_customer_id' | translate}}</h2>
 			<ion-item lines="none">
-				<ion-input type="email" placeholder="{{'email_customer_id' | translate}}"></ion-input>
+				<ion-input type="number" placeholder="{{'email_customer_id' | translate}}"></ion-input>
 			</ion-item>
+			<h2 class="d-flex">{{'enter_mpin' | translate}}</h2>
 			<ion-item lines="none">
-				<ion-input type="text" placeholder="{{'enter_mpin' | translate}}"></ion-input>
+				<ion-input type="password" placeholder="{{'enter_mpin' | translate}}"></ion-input>
 			</ion-item>
 		</ion-list>
 		<ion-button size="large" shape="block" class="btn" (click)="verification()">{{'sign_in' | translate}}</ion-button>

@@ -17,10 +17,6 @@ export class UploadDepositePage implements OnInit {
   servicesContitionsAccepted: boolean;
   ngOnInit() {
     this.servicesContitionsAccepted = this.getServicesConditionStatus();
-
-    if (!this.servicesContitionsAccepted) {
-      this.showServicesConditionsModal();
-    }
   }
   getServicesConditionStatus() {
     return  true;

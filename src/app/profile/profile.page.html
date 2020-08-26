@@ -3,11 +3,9 @@
 		<ion-buttons slot="start">
 			<ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
 		</ion-buttons>
-		<ion-title>{{'profile' | translate}}</ion-title>
+		<ion-title>Mi perfil</ion-title>
 	</ion-toolbar>
 </ion-header>
-
-
 <ion-content>
 	<div class="profile_img_box">
 		<div class="profile_img center_img">
@@ -18,20 +16,24 @@
 	<div class="form">
 		<ion-list lines="none">
 			<ion-item lines="none">
-				<ion-label position="floating">{{'full_name' | translate}}</ion-label>
-				<ion-input type="text" value="Sam Smith"></ion-input>
+				<ion-label position="floating">Nombre y apellidos</ion-label>
+				<ion-input type="text" value="Lionel Andrés Messi"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
 				<ion-label position="floating">{{'email_address' | translate}}</ion-label>
 				<ion-input type="text" value="samsmith@mail.com"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
-				<ion-label position="floating">{{'account_number' | translate}}</ion-label>
-				<ion-input type="text" value="+1 987 654 3210"></ion-input>
+				<ion-label position="floating">Número de teléfono</ion-label>
+				<ion-input type="text" value="0998856446"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
-				<ion-label position="floating">{{'customer_id' | translate}}</ion-label>
-				<ion-input type="text" value="HDXC114124"></ion-input>
+				<ion-label position="floating">Nueva contraseña</ion-label>
+				<ion-input type="password"></ion-input>
+			</ion-item>
+			<ion-item lines="none">
+				<ion-label position="floating">Confirmar nueva contraseña</ion-label>
+				<ion-input type="password"></ion-input>
 			</ion-item>
 			<!--
 		<ion-item>
@@ -44,6 +46,6 @@
 	</div>
 </ion-content>
 
-<ion-footer class="ion-no-border">
-	<ion-button size="large" shape="full" class="btn">{{'update_profile' | translate}}</ion-button>
+<ion-footer class="ion-no-border" style="padding: 10px;">
+	<ion-button size="large" shape="block" class="btn" (click)="tabs()">Actualizar perfil</ion-button>
 </ion-footer>

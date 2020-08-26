@@ -8,12 +8,17 @@ import { Router } from '@angular/router';
 })
 export class SignUpPage implements OnInit {
 
+  tipoIdentificacion: any;
   constructor(private route: Router) { }
 
   ngOnInit() {
   }
 
-verification() {
-    this.route.navigate(['./external-validation']);
+  verification() {
+    if (this.tipoIdentificacion === '1') {
+      this.route.navigate(['./external-validation']);
+    } else {
+      this.route.navigate(['./password-validation']);
+    }
   }
 }

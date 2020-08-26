@@ -27,8 +27,9 @@
 
 :root {
 	--white: #fff;
-	--primary: #058be6;
-	--secondary: #39c526;
+	--primary: #2ea6cc;
+	//--secondary: #87898c;
+	--secondary: #58555b;
 	--transparent: rgba(0, 0, 0, 0);
 	--text-light: #9a9a9a;
 	--text-dark: #343434;
@@ -37,7 +38,9 @@
 	--red_color: #df1515;
 }
 
-
+ion-toggle {
+	--background-checked: var(--primary);
+}
 .bg_color {
 	--background: var(--bg-color);
 }
@@ -90,7 +93,6 @@
 		margin: 0;
 		--box-shadow: none;
 		padding: 0;
-		text-transform: none;
 
 		ion-icon {
 			font-size: 1.4rem;
@@ -109,7 +111,7 @@
 		//			font-size: .95rem;
 		//			letter-spacing: 1.3px !important;
 		//
-		// 
+		//
 		//
 		//			&:hover:not(.disable-hover) {
 		//				--background: var(--transparent);
@@ -388,4 +390,8 @@ ion-app[dir="rtl"] {
 		right: unset;
 		left: 20px !important;
 	}
+}
+
+ion-button{
+	--background-activated: gray !important;
 }

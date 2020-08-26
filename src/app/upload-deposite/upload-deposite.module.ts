@@ -10,7 +10,6 @@ import { UploadDepositePageRoutingModule } from './upload-deposite-routing.modul
 import { UploadDepositePage } from './upload-deposite.page';
 import {InputCurrencyComponent} from '../components/common/input-currency/input-currency.component';
 import {DepositeHelpModalComponent} from '../components/modals/deposite-help-modal/deposite-help-modal.component';
-import {ServicesConditionsModalComponent} from '../components/modals/services-conditions-modal/services-conditions-modal.component';
 
 @NgModule({
   imports: [
@@ -20,7 +19,7 @@ import {ServicesConditionsModalComponent} from '../components/modals/services-co
     TranslateModule,
     UploadDepositePageRoutingModule
   ],
-  declarations: [UploadDepositePage, InputCurrencyComponent, DepositeHelpModalComponent, ServicesConditionsModalComponent],
-  entryComponents: [DepositeHelpModalComponent, ServicesConditionsModalComponent]
+  declarations: [UploadDepositePage, InputCurrencyComponent, DepositeHelpModalComponent],
+  entryComponents: [DepositeHelpModalComponent]
 })
 export class UploadDepositePageModule {}

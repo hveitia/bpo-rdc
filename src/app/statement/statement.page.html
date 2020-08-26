@@ -41,6 +41,7 @@
 		<ion-item *ngFor="let cheque of listadoChequesMostrar" (click)="showDetailModal(cheque)">
 			<div class="item_inner">
 				<h3 class="d-flex">Cheque # {{cheque.numero}} <span class="end" style="font-size: 0.8rem;">{{cheque.fecha}}</span></h3>
+				<h4 class="d-flex">{{cheque.estado}}</h4>
 				<h4 class="d-flex">{{cheque.banco}}<span class="end">${{cheque.valor}}</span></h4>
 			</div>
 		</ion-item>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import Cheque from '../../models/Cheque';
 import EstadoCheque from '../../models/Enums/EstadoCheque';
 import {ComunicacionService} from 'comunicacion-http-plan-market';
+// @ts-ignore
 import moment from 'moment';
 import {ModalController} from '@ionic/angular';
 import {CheckDetailComponent} from '../components/modals/check-detail/check-detail.component';

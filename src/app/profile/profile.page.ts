@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AlertController, NavController} from '@ionic/angular';
+import {UsuarioService} from '../../services/usuario.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,11 +9,20 @@ import {AlertController, NavController} from '@ionic/angular';
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private navCtrl: NavController, public alertController: AlertController, ) { }
+  nombre: string;
+  email: string;
+  celular: string;
+  constructor(private navCtrl: NavController, public alertController: AlertController, private  usuarioService: UsuarioService ) { }
 
   ngOnInit() {
+    this.nombre = this.usuarioService.getNombre();
+    this.email = this.usuarioService.getEmail();
+    this.celular = this.usuarioService.getCelular();
   }
   async tabs() {
+    this.usuarioService.setNombre(this.nombre);
+    this.usuarioService.setCelular(this.celular);
+    this.usuarioService.setEmail(this.email);
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Datos actualizados',

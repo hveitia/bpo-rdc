@@ -17,15 +17,15 @@
 		<ion-list lines="none">
 			<ion-item lines="none">
 				<ion-label position="floating">Nombre y apellidos</ion-label>
-				<ion-input type="text" value="Lionel Andrés Messi"></ion-input>
+				<ion-input type="text" [(ngModel)]="nombre"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
 				<ion-label position="floating">{{'email_address' | translate}}</ion-label>
-				<ion-input type="text" value="samsmith@mail.com"></ion-input>
+				<ion-input type="text" [(ngModel)]="email"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
 				<ion-label position="floating">Número de teléfono</ion-label>
-				<ion-input type="text" value="0998856446"></ion-input>
+				<ion-input type="text" [(ngModel)]="celular"></ion-input>
 			</ion-item>
 			<ion-item lines="none">
 				<ion-label position="floating">Nueva contraseña</ion-label>

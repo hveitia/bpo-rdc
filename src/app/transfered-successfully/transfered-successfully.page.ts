@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import Cheque from '../../models/Cheque';
+import {DepositoCheque} from '../../services/deposito_cheque.service';
 
 @Component({
   selector: 'app-transfered-successfully',
@@ -8,9 +10,11 @@ import { NavController } from '@ionic/angular';
 })
 export class TransferedSuccessfullyPage implements OnInit {
 
-  constructor(private navCtrl: NavController, ) { }
+  private  cheque: Cheque;
+  constructor(private navCtrl: NavController, public depositoChequeService: DepositoCheque, ) { }
 
   ngOnInit() {
+    this.cheque = this.depositoChequeService.getCheque();
   }
 
   tabs() {

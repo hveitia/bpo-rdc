@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Cheque from '../../models/Cheque';
 import EstadoCheque from '../../models/Enums/EstadoCheque';
-import {ComunicacionService} from 'comunicacion-http-plan-market';
+
 // @ts-ignore
 import moment from 'moment';
 import {ModalController} from '@ionic/angular';
@@ -87,11 +87,6 @@ export class StatementPage implements OnInit {
 
   toogleShowFilters() {
     this.showFilters = !this.showFilters;
-    // debugger
-    // const api = new ComunicacionService();
-    // api.ejecutarPeticionGet().then(
-    //     data => console.log(data)
-    // );
   }
 
   filterByDate() {

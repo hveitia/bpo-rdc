@@ -14,7 +14,7 @@
 	<div class="img_container">
 		<ion-card>
 <!--			<span class="end">{{'delete' | translate}}</span>-->
-			<p class="d-flex">{{'front_side' | translate}} </p>
+			<p class="d-flex">Lado anverso</p>
 			<div class="img_box center_img">
 <!--				<img src="assets/imgs/cheque_book.jpg" class="crop_img">-->
 			</div>
@@ -22,7 +22,7 @@
 		</ion-card>
 
 		<ion-card>
-			<p class="d-flex">{{'back_side' | translate}} <span class="end"></span></p>
+			<p class="d-flex">Lado reverso<span class="end"></span></p>
 			<div class="img_box center_img">
 <!--				<img src="assets/imgs/cheque_book.jpg" class="crop_img">-->
 			</div>
@@ -34,14 +34,14 @@
 		<ion-list lines="none">
 			<h2 class="d-flex">Cheque #</h2>
 			<ion-item lines="none">
-				<ion-input type="number" placeholder="Número de cheque"></ion-input>
+				<ion-input type="number" placeholder="Número de cheque" [(ngModel)]="numero"></ion-input>
 			</ion-item>
 			<h2>{{'deposite_to' | translate}}</h2>
 			<ion-item lines="none">
-				<ion-select interface="action-sheet"  placeholder="{{'select_bank' | translate}}">
-					<ion-select-option value="1">Banco Amazonas</ion-select-option>
-					<ion-select-option value="2">Banco Pichincha</ion-select-option>
-					<ion-select-option value="3">Banco Guayaquil</ion-select-option>
+				<ion-select interface="action-sheet"  placeholder="{{'select_bank' | translate}}" [(ngModel)]="banco">
+					<ion-select-option value="Banco Amazonas">Banco Amazonas</ion-select-option>
+					<ion-select-option value="Banco Pichincha">Banco Pichincha</ion-select-option>
+					<ion-select-option value="Banco Guayaquil">Banco Guayaquil</ion-select-option>
 				</ion-select>
 			</ion-item>
 			<h2 class="d-flex">{{'account_tipe' | translate}}</h2>
@@ -53,7 +53,7 @@
 			</ion-item>
 			<h2 class="d-flex">{{'account_number' | translate}}</h2>
 			<ion-item lines="none">
-				<ion-input type="number" placeholder="{{'account_number'  | translate}}"></ion-input>
+				<ion-input type="number" placeholder="{{'account_number'  | translate}}" [(ngModel)]="cuenta"></ion-input>
 			</ion-item>
 			<h2 class="d-flex">{{'amount' | translate}}</h2>
 			<ion-item lines="none">

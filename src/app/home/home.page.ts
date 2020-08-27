@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import {UsuarioService} from '../../services/usuario.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+    nombre: string;
+    email: string;
+    celular: string;
+  constructor(private route: Router, private  usuarioService: UsuarioService) {
+  }
 
-  constructor(private route: Router) { }
-
+    ionViewWillEnter(){
+        this.nombre = this.usuarioService.getNombre();
+        this.email = this.usuarioService.getEmail();
+        this.celular = this.usuarioService.getCelular();
+    }
   ngOnInit() {
   }
 

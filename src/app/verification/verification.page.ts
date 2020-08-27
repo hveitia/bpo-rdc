@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import {ComunicacionService} from 'comunicacion-http-plan-market';
 
 @Component({
   selector: 'app-verification',
@@ -13,6 +14,10 @@ export class VerificationPage implements OnInit {
   ngOnInit() {
   }
   tabs() {
-    this.navCtrl.navigateRoot(['./tabs']);
-  } 
+    const api = new ComunicacionService();
+    const data = api.verificarOtp(true);
+    if (data.codigo === 0) {
+      this.navCtrl.navigateRoot(['./tabs']);
+    }
+  }
 }
